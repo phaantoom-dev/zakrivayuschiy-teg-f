@@ -2,7 +2,7 @@
 
 :root {
   --font: "Inter-Variable";
-  --font-accent: "PressStart2P-Regular";
+  --font-accent: "PressStart2P";
 
   --main-font-size: 1.125rem;
   --accent-font-size: 0.875rem;
@@ -19,6 +19,9 @@
 
   --card-font-weight: 400;
   --card-title-font-weight: 700;
+
+  --margin-heigt-top: 130px;
+  --margin-heigt-bottom: 127px;
 
   --bg-image:
     repeating-linear-gradient(
@@ -42,5 +45,7 @@
   :root {
     --floppy-size: 28px;
     --modal-padding-inline: 40px;
+    --margin-heigt-top: 121px;
+    --margin-heigt-bottom: 119px;
   }
 }
