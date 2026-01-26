@@ -250,7 +250,6 @@ article {
 }
 
 .like-icon.is-liked .sparks {
-  animation-name: heart-scale;
   animation-name: sparks-anim;
   animation-delay: 0.3s;
   animation-timing-function: ease-in;
