@@ -180,9 +180,10 @@ article {
 
 .contour {
   fill: var(--heart-hover, #000);
-  transition: fill 0.3s linear; 
+  transition: fill 0.3s linear;
   transition-duration: 0s;
 }
+
 
 .core {
   fill: transparent;
