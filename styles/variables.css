@@ -5,9 +5,9 @@
   --font-accent: "PressStart2P";
 
   --main-font-size: 1.125rem;
-  --accent-font-size: 0.875rem;
+  --accent-font-size: 14px;
 
-  --floppy-size: 21px;
+  --floppy-size: 39px;
   --modal-padding-inline: 30px;
 
   --card-inline-size: clamp(min(100%, 375px), 50vw, 700px);
@@ -43,7 +43,7 @@
 
 @media (width <= 375px) {
   :root {
-    --floppy-size: 28px;
+    --floppy-size: 39px;
     --modal-padding-inline: 40px;
     --margin-heigt-top: 121px;
     --margin-heigt-bottom: 119px;

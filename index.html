@@ -654,7 +654,7 @@
         </div>
       </article>
       <button
-        class="button save-button"
+        class="button save-button btn_footer"
         type="button"
         onclick="window['dialog'].showModal()"
         aria-controls="dialog"
@@ -666,10 +666,13 @@
       </button>
     </main>
     <dialog id="dialog" class="save">
+      <div class="save_floppy">
       <svg class="floppy floppy-modal">
         <use href="./svg/floppy.svg#floppy"></use>
       </svg>
-      <h2 class="dialog-title">Вставьте дискету, чтобы продолжить</h2>
+      <h2 class="dialog-title">Вставьте
+дискету, чтобы продолжить</h2>
+      </div>
       <button
         type="button"
         class="button save-button dialog-button"

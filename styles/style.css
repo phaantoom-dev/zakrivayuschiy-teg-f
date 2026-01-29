@@ -180,13 +180,14 @@ article {
 
 .contour {
   fill: var(--heart-hover, #000);
-  transition-duration: 0.1s;
+  transition: fill 0.3s linear; 
+  transition-duration: 0s;
 }
 
 .core {
   fill: transparent;
-  transition-delay: 0.03s;
-  transition-duration: 0.3s;
+  transition-delay: fill 0.03s linear;
+  transition-duration: 0s;
 }
 
 .like-icon {
@@ -208,8 +209,8 @@ article {
 
 .main-body {
   fill: transparent;
-  transition-delay: 0s;
-  transition-duration: 0.3s;
+  transition-delay: fill 0.3s linear;
+  transition-duration: 0s;
 }
 
 .like-icon:hover .main-body {
@@ -221,14 +222,11 @@ article {
 .like-icon:active .main-body {
   fill: #ff0000;
   transition-delay: 0.05s;
-  transition-duration: 0.3s;
 }
 
 .like-icon.is-liked .core {
-  animation-name: heart-scale;
   fill: #ff0000;
   transition-delay: 0s;
-  transition-duration: 0.3s;
 }
 
 .like-icon.is-liked .main-body {
@@ -239,17 +237,16 @@ article {
 }
 
 .like-icon.is-liked .contour {
-  animation-name: heart-scale;
   fill: #ff0000;
   transition-delay: 0.06s;
-  transition-duration: 0.3s;
+}
+
+.like-icon.is-liked .heart {
+  animation: heart-scale 0.3s ease-in 0.1s 1;
 }
 
 .like-icon.is-liked .sparks {
-  animation-name: sparks-anim;
-  animation-delay: 0.3s;
-  animation-timing-function: ease-in;
-  animation-duration: 0.3s;
+  animation: sparks-anim 0.3s ease-in 0.3s 1;
 }
 
 .is-liked .heart {
@@ -309,7 +306,7 @@ article {
   align-items: center;
   gap: 8px;
   margin: 0 auto;
-  padding: 15px 20px;
+  padding: 9px 17px;
   max-inline-size: 83vw;
 }
 
@@ -321,42 +318,57 @@ article {
 .dialog-button {
   grid-column: 1 / -1;
   text-transform: uppercase;
-  inline-size: 100%;
+  inline-size: 261px;
 }
 
 .floppy {
   position: relative;
   z-index: 1;
   color: var(--button-text-color, #fff);
-  inline-size: var(--floppy-size, 28px);
-  block-size: var(--floppy-size, 28px);
+  inline-size: var(--floppy-size, 39px);
+  block-size: var(--floppy-size, 39px);
   mix-blend-mode: difference;
 }
 
 .save[open] {
-  display: grid;
-  grid-template-columns: auto auto;
-  row-gap: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
   column-gap: clamp(12px, 2vw, 20px);
   padding: var(--modal-padding-inline, 30px) 30px;
   color: var(--main-color, #000);
   font-family: var(--font-accent, "Courier New", monospace);
   font-size: var(--accent-font-size, 0.875rem);
+  font-weight: 400;
   line-height: 1.5;
   text-transform: uppercase;
   background-color: var(--bg-color, #fff);
-  max-inline-size: 357px;
+  max-inline-size: 341px;
+  gap: 30px;
+}
+.save_floppy {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  max-inline-size: 261px;
 }
 
 .dialog-title {
   font-size: var(--accent-font-size, 0.875rem);
   line-height: 1.5;
+  inline-size: 234px;
 }
 
 .floppy-modal {
-  --floppy-size: 38px;
+  justify-content: center;
+  align-self: center;
+  --floppy-size: 39px;
 }
 
 .save::backdrop {
   background-color: rgb(0 0 0 / 0.75);
+}
+.btn_footer {
+  margin-bottom: 100px;
 }
